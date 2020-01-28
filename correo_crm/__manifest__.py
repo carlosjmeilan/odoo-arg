@@ -7,19 +7,6 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        prueba conn 5
-=======
-        prueba conn 6
->>>>>>> 50baaf13e9004ac4a9ae591eb098a3b822874b6c
-=======
-        prueba conn 7
->>>>>>> 219f8c0d88aa4d99442c3315b1b0ff0eb2dfffc4
-=======
-        prueba conn 9
->>>>>>> 884440b179dd4adf21f526d02894beace76c3684
     """,
 
     'author': "Carlos Meilan",
