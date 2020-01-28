@@ -8,10 +8,14 @@
 
     'description': """
 <<<<<<< HEAD
+<<<<<<< HEAD
         prueba conn 5
 =======
         prueba conn 6
 >>>>>>> 50baaf13e9004ac4a9ae591eb098a3b822874b6c
+=======
+        prueba conn 7
+>>>>>>> 219f8c0d88aa4d99442c3315b1b0ff0eb2dfffc4
     """,
 
     'author': "Carlos Meilan",
