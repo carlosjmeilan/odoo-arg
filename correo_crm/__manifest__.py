@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        prueba conn 26
+        prueba conn 31
     """,
 
     'author': "Carlos Meilan",
