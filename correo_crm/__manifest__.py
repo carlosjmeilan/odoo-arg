@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        prueba conn 32
+        Aplicación que permite enviar un mail a la iniciativa reción creada
     """,
 
     'author': "Carlos Meilan",

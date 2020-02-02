@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 class correo_crm(models.Model):
 
      _inherit = 'crm.lead'
-     correo_enviado = fields.Boolean(string='flag to email')
+     correo_enviado = fields.Boolean(string='email enviado')
 
      def automata(self):
           mail_values = {
@@ -22,20 +22,24 @@ class correo_crm(models.Model):
           record = super(correo_crm, self).create(values)
           record['correo_enviado'] = True
 
+
+          email_to = values ['email_from']
+
+          body = '<![CDATA[
+	             <p>Dear ${(object.name)},<br/><br/>
+	             Good job, you've just created your first e-mail template!<br/></p>
+                 Regards,<br/>
+                ${(object.company_id.name)}
+	             ]]>'
+
           mail_values = {
-              'subject' : 'CVS',
-              'body_html' : 'CVS',
-              'email_to':'carlosjmeilan@yahoo.com.ar',
-              'email_from':'admin@gestiongma.com'
-          }
+             'subject' : 'gracias por comunicarse con nosotros',
+             'body_html': boby,
+             'email_to': email_to,
+             'email_from':'admin@gestiongma.com'
+              }
+
           self.env['mail.mail'].sudo().create(mail_values).send()
+
+
           return record
-
-
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
